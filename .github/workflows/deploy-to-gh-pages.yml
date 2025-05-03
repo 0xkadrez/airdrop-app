@@ -20,7 +20,6 @@ jobs:
 
       - name: Install Dependencies 📦
         run: |
-          cd airdrop-app
           npm install
 
       - name: Build 🔧
