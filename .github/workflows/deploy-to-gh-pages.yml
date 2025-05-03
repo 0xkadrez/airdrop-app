@@ -3,8 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Ejecutar cuando se haga push a la rama main
-  workflow_dispatch: # Permite ejecutar manualmente desde la interfaz de GitHub
+      - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -17,26 +17,23 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: 'airdrop-app/package-lock.json'
 
       - name: Install Dependencies 📦
         run: |
           cd airdrop-app
-          npm ci # Instalación limpia basada en package-lock.json
+          npm install
 
       - name: Build 🔧
         run: |
           cd airdrop-app
           npm run build
-          # Asegurarse de que CNAME esté presente
-          cp public/CNAME build/
+          cp public/CNAME build/ || echo "CNAME file doesn't exist"
         env:
-          CI: false # Evita que la compilación falle por advertencias
+          CI: false
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: airdrop-app/build # Carpeta que contiene los archivos compilados
-          branch: gh-pages # Rama donde se desplegará
-          clean: true # Limpia los archivos existentes en la rama gh-pages 
+          folder: airdrop-app/build
+          branch: gh-pages
+          clean: true
