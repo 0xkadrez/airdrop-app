@@ -238,7 +238,7 @@ const AVALANCHE_TESTNET_PARAMS = {
 };
 
 // Por defecto usamos la testnet para pruebas
-export const DEFAULT_NETWORK = AVALANCHE_TESTNET_PARAMS;
+export const DEFAULT_NETWORK = AVALANCHE_MAINNET_PARAMS;
 
 // IMPORTANTE: Dirección del contrato en Fuji Testnet
 export const AIRDROP_CONTRACT_ADDRESS = process.env.REACT_APP_AIRDROP_CONTRACT_ADDRESS || "0x52b3c49D90a06bd4Db1DC09893c24B2c2625A2fA"; // Dirección de respaldo
