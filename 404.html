@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redireccionando...</title>
+  <script>
+    // Manejo de rutas en SPA para GitHub Pages
+    const segmentCount = 0; // Cambia a 1 si estás en un proyecto con ruta como /airdrop-app
+    const l = window.location;
+    const origin = l.origin || (l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : ''));
+    
+    // Redirecciona todas las rutas a la página principal
+    l.replace(
+      origin + 
+      (segmentCount ? l.pathname.split('/').slice(0, 1 + segmentCount).join('/') : '') + 
+      '/?p=/' + l.pathname.slice(1).split('/').slice(segmentCount).join('/') + 
+      (l.search ? '&q=' + l.search.slice(1) : '') + 
+      (l.hash || '')
+    );
+  </script>
+</head>
+<body>
+  <p>Redireccionando...</p>
+</body>
+</html> 
