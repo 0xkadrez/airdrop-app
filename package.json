@@ -19,7 +19,7 @@
     "web-vitals": "^2.1.4",
     "web3modal": "^1.9.12"
   },
-  "homepage": "https://tuusuario.github.io/airdrop-app",
+  "homepage": "https://0xkadrez.github.io/airdrop-app",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
