@@ -24,7 +24,6 @@ jobs:
 
       - name: Build 🔧
         run: |
-          cd airdrop-app
           npm run build
           cp public/CNAME build/ || echo "CNAME file doesn't exist"
         env:
