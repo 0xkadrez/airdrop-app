@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/airdrop-app/static/css/main.e6c13ad2.css",
+    "main.js": "/airdrop-app/static/js/main.dc0769d3.js",
+    "static/js/453.b67e5725.chunk.js": "/airdrop-app/static/js/453.b67e5725.chunk.js",
+    "index.html": "/airdrop-app/index.html",
+    "main.e6c13ad2.css.map": "/airdrop-app/static/css/main.e6c13ad2.css.map",
+    "main.dc0769d3.js.map": "/airdrop-app/static/js/main.dc0769d3.js.map",
+    "453.b67e5725.chunk.js.map": "/airdrop-app/static/js/453.b67e5725.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.dc0769d3.js"
+  ]
+}
