@@ -2,12 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script>
+      // Manejo de redirección para SPA en GitHub Pages
+      (function() {
+        const search = window.location.search;
+        if (search.includes('?p=/')) {
+          const redirectPath = search.substring(search.indexOf('?p=/') + 4);
+          const queryString = search.includes('&q=') 
+            ? '?' + search.substring(search.indexOf('&q=') + 3)
+            : '';
+          const hash = window.location.hash;
+          window.history.replaceState(null, null, 
+            redirectPath + queryString + hash
+          );
+        }
+      })();
+    </script>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Distribuye tokens ERC20 en la red Avalanche"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -24,7 +40,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>UVD Airdrop</title>
+    <title>UltraVioletaDAO Airdrop</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
